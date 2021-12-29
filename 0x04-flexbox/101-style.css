@@ -1,0 +1,57 @@
+:root {
+  --box1: #201853;
+  --box2: #01aaff;
+  --box3: #201853;
+  --box4: #01aaff;
+  --box5: #201853;
+  --font-box: Lucida Console, Helvetica, monospace;
+  --font-size-level1: 1rem;
+  --font-size-level2: 2rem;
+  --font-size-level3: 3rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-family: var(--font-box);
+  width: 3em;
+  height: 2.5em;
+}
+
+.box1 {
+  background-color: var(--box1);
+  font-size: var(--font-size-level1);
+  width: 3rem;
+  height: 2rem;
+}
+
+.box2 {
+  background-color: var(--box2);
+  font-size: var(--font-size-level2);
+}
+
+.box3 {
+  background-color: var(--box3);
+  font-size: var(--font-size-level3);
+}
+
+.box4 {
+  background-color: var(--box4);
+  font-size: var(--font-size-level2);
+}
+
+.box5 {
+  background-color: var(--box5);
+  font-size: var(--font-size-level1);
+  width: 3rem;
+  height: 2rem;
+}

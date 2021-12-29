@@ -1,0 +1,16 @@
+/* My style */
+$value: 12px;
+$max: 320px;
+h1 {
+    font-size: $value + 8;
+    @media screen and (max-width: ($max * 3)) {
+        font-size: $value + 6;
+    }
+    @media screen and (max-width: ($max * 2)) {
+        font-size: $value + 4;
+    }
+    @media screen and (max-width: $max) {
+        font-size: $value + 2;
+        &.small { color: #1D1D1D; }
+    }
+}

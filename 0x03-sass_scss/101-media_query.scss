@@ -1,0 +1,9 @@
+/* My style */
+$var: 20px;
+$max: $var + 300;
+h1 {
+    font-size: $var;
+    @media screen and (max-width: $max) {
+        font-size: $var - 6;
+    }
+}
