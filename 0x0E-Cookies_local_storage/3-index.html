@@ -52,15 +52,13 @@
         }
         function showForm() {
             if (document.getElementsByTagName("h1")[0]) document.getElementsByTagName("h1")[0].remove();
-            const $form = `
+            document.body.innerHTML = `
             <div>
                 <h2>Login to the website</h2>
                 <input type="text" placeholder="Firstname" id="firstname" />
                 <input type="text" placeholder="Email" id="email" />
                 <button onclick="setCookies()">Log me in</button>
-            </div>
-          `;
-            document.body.innerHTML = $form;
+            </div>`;
         }
         function setCookies() {
             const inputs = [document.getElementById("firstname"), document.getElementById("email")];
