@@ -5,26 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task 0</title>
 </head>
 
 <body>
-    <h3>Login to the website</h3>
-    <input type="text" placeholder="Firtsname" id="firstname">
-    <input type="text" placeholder="Email" id="email">
-    <button onclick="setCookies()">Log me in</button>
-    <h3>Cookies</h3>
-    <button onclick="showCookies()">Show the cookies</button>
-    <script>
+
+    <h1>Login to the website</h1>
+    <form>
+        <input type="text" id="firstname" placeholder="Firstname">
+        <input type="text" id="email" placeholder="Email">
+        <button onclick="setCookies();">Log me in</button>
+    </form>
+
+    <h1>Cookies</h1>
+    <button onclick="showCookies();">Show me cookies</button>
+    <hr>
+
+    <script type="text/javascript">
         function setCookies() {
-            document.cookie = `firstname=${document.getElementById("firstname").value}`;
-            document.cookie = `email=${document.getElementById("email").value}`;
+            const firstname = document.getElementById("firstname").value;
+            const email = document.getElementById("email").value;
+            document.cookie = `firstname=${firstname}`;
+            document.cookie = `email=${email}`
         }
+
         function showCookies() {
-            const par = document.createElement("p");
-            par.innerHTML = `Cookies: ${document.cookie}`
-            document.body.appendChild(par);
+            const p = document.createElement("p").innerHTML = document.cookie
+            document.body.append(p);
         }
+
     </script>
 </body>
 
