@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 5</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="application/javascript">
+        $(document).ready(() => {
+            function createFamilyTree() {
+                $("body").prepend(`
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+            `);
+            }
+
+            function addNewMember(firstName, lastName) {
+                const $tr = `
+              <tr>
+                <td>${firstName}</td>
+                <td>${lastName}</td>
+              </tr>
+          `;
+                const $tdButton = `<td>(x)</td>`;
+
+                $("tbody").append($tr);
+                $($tdButton)
+                    .appendTo("tbody tr:last")
+                    .css({ background: "orange", cursor: "pointer" })
+                    .click(function (e) {
+                        $(e.currentTarget.parentNode).remove();
+                    });
+            }
+
+            function main() {
+                const members = [
+                    {
+                        firstName: "Guillaume",
+                        lastName: "Salva"
+                    },
+                    {
+                        firstName: "Arielle",
+                        lastName: "Snizt"
+                    },
+                    {
+                        firstName: "Fanette",
+                        lastName: "Snizt"
+                    },
+                    {
+                        firstName: "Gerard",
+                        lastName: "Snizt"
+                    },
+                    {
+                        firstName: "Victor",
+                        lastName: "Snizt"
+                    },
+                ];
+
+                createFamilyTree();
+                for (const member of members)
+                    addNewMember(member.firstName, member.lastName);
+
+            }
+            main();
+        });
+    </script>
+</body>
+
+</html>
