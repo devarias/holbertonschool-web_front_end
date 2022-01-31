@@ -49,6 +49,11 @@
       "title": "JSON Schema: Integrity Checking for NoSQL Data",
       "author": "eliblackriver",
       "id": 10
+    },
+    {
+      "title": "Everything is an object!",
+      "author": "devarias",
+      "id": 10
     }
   ],
   "comments": [

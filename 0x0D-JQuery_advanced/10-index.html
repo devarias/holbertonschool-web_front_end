@@ -27,7 +27,7 @@
 
                 $.get(
                     `${host}/${path}`,
-                    function (data) {
+                    (data) => {
                         Object.keys(data).forEach((key) => {
                             addPostRow(data[key]);
                         });
